@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our Menu - Aphro Hotel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Additional Menu Page Styles */
+        .menu-header {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .menu-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 36px;
+        }
+        
+        .menu-header p {
+            margin: 0;
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .menu-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .category-section {
+            margin-bottom: 40px;
+        }
+        
+        .category-title {
+            background: #ff6b35;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        .category-title i {
+            margin-right: 10px;
+        }
+        
+        .menu-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        
+        .menu-table th {
+            background: #333;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .menu-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .menu-table tr:hover {
+            background: #f8f9ff;
+            transition: background 0.3s ease;
+        }
+        
+        .menu-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .item-name {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .item-name i {
+            margin-right: 10px;
+            color: #ff6b35;
+        }
+        
+        .category-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .category-fish {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .category-drink {
+            background: #e8f5e9;
+            color: #388e3c;
+        }
+        
+        .category-juice {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+        
+        .price {
+            font-weight: 700;
+            color: #ff6b35;
+            font-size: 16px;
+        }
+        
+        .order-btn {
+            background: #ff6b35;
+            color: white;
+            border: none;
+            padding: 6px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .order-btn:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+        }
+        
+        .order-btn i {
+            margin-right: 5px;
+        }
+        
+        .total-items {
+            text-align: right;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        
+        .cta-section .btn {
+            background: white;
+            color: #ff6b35;
+            padding: 12px 30px;
+            font-size: 16px;
+        }
+        
+        .cta-section .btn:hover {
+            background: #333;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .menu-table th, 
+            .menu-table td {
+                padding: 8px 10px;
+                font-size: 14px;
+            }
+            
+            .menu-header {
+                padding: 30px;
+            }
+            
+            .menu-header h1 {
+                font-size: 28px;
+            }
+            
+            .order-btn {
+                padding: 4px 10px;
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <h2 class="logo"><i class="fa fa-hotel"></i> Aphro Hotel</h2>
+    <div class="menu">
+        <a href="index.html"><i class="fa fa-home"></i> Home</a>
+        <a href="about.html"><i class="fa fa-info-circle"></i> About</a>
+        <a href="gallery.html"><i class="fa fa-image"></i> Gallery</a>
+        <a href="contact.php"><i class="fa fa-envelope"></i> Contact</a>
+    </div>
+</div>
+
+<div class="content">
+    <div class="menu-header">
+        <h1><i class="fa fa-utensils"></i> Our Delicious Menu</h1>
+        <p><i class="fa fa-star"></i> Freshly prepared with love | Quality ingredients | Best prices in town</p>
+    </div>
+    
+    <div class="menu-container">
+        <!-- Fish Section -->
+        <div class="category-section">
+            <div class="category-title">
+                 Fish Dishes
+            </div>
+            <table class="menu-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Category</th>
+                        <th>Price (RWF)</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="item-name"> Grilled Fish</td>
+                        <td><span class="category-badge category-fish"> Fish</span></td>
+                        <td class="price">5,000 RWF</td>
+                        <td><button class="order-btn" onclick="location.href='order.php'"><i class="fa fa-shopping-cart"></i> Order</button></td>
+                    </tr>
+                    <tr>
+                        <td class="item-name"> Fried Fish</td>
+                        <td><span class="category-badge category-fish"> Fish</span></td>
+                        <td class="price">4,500 RWF</td>
+                        <td><button class="order-btn" onclick="location.href='order.php'"><i class="fa fa-shopping-cart"></i> Order</button></td>
+                    </tr>
+                    <tr>
+                        <td class="item-name"> Fish Stew</td>
+                        <td><span class="category-badge category-fish"> Fish</span></td>
+                        <td class="price">6,000 RWF</td>
+                        <td><button class="order-btn" onclick="location.href='order.php'"><i class="fa fa-shopping-cart"></i> Order</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Drinks Section -->
+        <div class="category-section">
+            <div class="category-title">
+                 Soft Drinks
+            </div>
+            <table class="menu-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Category</th>
+                        <th>Price (RWF)</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="item-name"> Coca Cola</td>
+                        <td><span class="category-badge category-drink"> Drink</span></td>
+                        <td class="price">1,000 RWF</td>
+                        <td><button class="order-btn" onclick="location.href='order.php'"><i class="fa fa-shopping-cart"></i> Order</button></td>
+                    </tr>
+                    <tr>
+                        <td class="item-name"> Fanta</td>
+                        <td><span class="category-badge category-drink"> Drink</span></td>
+                        <td class="price">1,000 RWF</td>
+                        <td><button class="order-btn" onclick="location.href='order.php'"><i class="fa fa-shopping-cart"></i> Order</button></td>
+                    </tr>
+                    <tr>
+                        <td class="item-name"> Sprite</td>
+                        <td><span class="category-badge category-drink"> Drink</span></td>
+                        <td class="price">1,000 RWF</td>
+                        <td><button class="order-btn" onclick="location.href='order.php'"><i class="fa fa-shopping-cart"></i> Order</button></td>
+                    </tr>
+                    <tr>
+                        <td class="item-name"> Beer</td>
+                        <td><span class="category-badge category-drink"> Drink</span></td>
+                        <td class="price">2,500 RWF</td>
+                        <td><button class="order-btn" onclick="location.href='order.php'"><i class="fa fa-shopping-cart"></i> Order</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Fresh Juices Section -->
+        <div class="category-section">
+            <div class="category-title">
+                 Fresh Juices
+            </div>
+            <table class="menu-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Category</th>
+                        <th>Price (RWF)</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="item-name"> Mango Juice</td>
+                        <td><span class="category-badge category-juice"> Fresh Juice</span></td>
+                        <td class="price">2,000 RWF</td>
+                        <td><button class="order-btn" onclick="location.href='order.php'"><i class="fa fa-shopping-cart"></i> Order</button></td>
+                    </tr>
+                    <tr>
+                        <td class="item-name"> Orange Juice</td>
+                        <td><span class="category-badge category-juice"> Fresh Juice</span></td>
+                        <td class="price">2,000 RWF</td>
+                        <td><button class="order-btn" onclick="location.href='order.php'"><i class="fa fa-shopping-cart"></i> Order</button></td>
+                    </tr>
+                    <tr>
+                        <td class="item-name"> Passion Juice</td>
+                        <td><span class="category-badge category-juice"> Fresh Juice</span></td>
+                        <td class="price">2,500 RWF</td>
+                        <td><button class="order-btn" onclick="location.href='order.php'"><i class="fa fa-shopping-cart"></i> Order</button></td>
+                    </tr>
+                    <tr>
+                        <td class="item-name"> Pineapple Juice</td>
+                        <td><span class="category-badge category-juice"> Fresh Juice</span></td>
+                        <td class="price">2,500 RWF</td>
+                        <td><button class="order-btn" onclick="location.href='order.php'"><i class="fa fa-shopping-cart"></i> Order</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="total-items">
+            <i class="fa fa-list-ul"></i> Total Menu Items: 11 | 
+            <i class="fa fa-clock"></i> Open Daily: 8:00 AM - 10:00 PM
+        </div>
+    </div>
+    
+    <div class="cta-section">
+        <h2><i class="fa fa-heart"></i> Ready to Order?</h2>
+        <p>Choose your favorite dish and we'll deliver it hot and fresh to your doorstep!</p>
+        <a href="order.php" class="btn"><i class="fa fa-shopping-cart"></i> Order Now</a>
+    </div>
+</div>
+
+<div class="footer">
+    <p><i class="fa fa-copyright"></i> 2026 Aphro Hotel | All Rights Reserved | <i class="fa fa-phone"></i> +250 792448519</p>
+</div>
+
+</body>
+</html>

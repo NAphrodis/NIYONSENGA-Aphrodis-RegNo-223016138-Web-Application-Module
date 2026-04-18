@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gallery - Aphro Hotel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Additional Gallery Page Styles */
+        .gallery-header {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .gallery-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 36px;
+        }
+        
+        .gallery-header p {
+            margin: 0;
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .gallery-container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .gallery-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+        
+        .gallery-item a {
+            text-decoration: none;
+            display: block;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-item p {
+            padding: 15px;
+            margin: 0;
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+            background: white;
+        }
+        
+        .gallery-item p i {
+            margin-right: 8px;
+            color: #ff6b35;
+        }
+        
+        .order-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ff6b35;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .gallery-item {
+            position: relative;
+        }
+        
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+            color: white;
+            padding: 50px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        
+        .cta-section h2 {
+            margin: 0 0 15px 0;
+            font-size: 28px;
+        }
+        
+        .cta-section p {
+            margin: 0 0 20px 0;
+            font-size: 16px;
+        }
+        
+        .cta-section .btn {
+            background: white;
+            color: #ff6b35;
+            padding: 12px 30px;
+            font-size: 16px;
+        }
+        
+        .cta-section .btn:hover {
+            background: #333;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 20px;
+            }
+            
+            .gallery-item img {
+                height: 200px;
+            }
+            
+            .gallery-header {
+                padding: 30px;
+            }
+            
+            .gallery-header h1 {
+                font-size: 28px;
+            }
+            
+            .cta-section {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2 class="logo"><i class="fa fa-hotel"></i> Aphro Hotel</h2>
+    <div class="menu">
+        <a href="index.html"><i class="fa fa-home"></i> Home</a>
+        <a href="about.html"><i class="fa fa-info-circle"></i> About</a>
+        <a href="menu.html"><i class="fa fa-utensils"></i> Menu</a>
+        <a href="gallery.html"><i class="fa fa-image"></i> Gallery</a>
+        <a href="order.php"><i class="fa fa-shopping-cart"></i> Order</a>
+        <a href="contact.php"><i class="fa fa-envelope"></i> Contact</a>
+        <a href="login.php" class="login-btn"><i class="fa fa-sign-in-alt"></i> Login</a>
+    </div>
+</div>
+
+<!-- PAGE TITLE with better design -->
+<div class="content">
+    <div class="gallery-header">
+        <h1><i class="fa fa-camera"></i> Our Food and Drinks Gallery</h1>
+        <p><i class="fa fa-mouse-pointer"></i> Click on any image to place your order instantly</p>
+    </div>
+</div>
+
+<!-- GALLERY SECTION -->
+<div class="content">
+    <div class="gallery-container">
+        <div class="gallery">
+            <div class="gallery-item">
+                <a href="order.php">
+                    <img src="images/food1.jpg" alt="Grilled Fish">
+                    <div class="order-badge"><i class="fa fa-shopping-cart"></i> Order Now</div>
+                </a>
+                <p> Grilled Fish <span style="color:#ff6b35; font-size:14px;">$15.99</span></p>
+            </div>
+
+            <div class="gallery-item">
+                <a href="order.php">
+                    <img src="images/food2.jpg" alt="Fresh Juice">
+                    <div class="order-badge"><i class="fa fa-shopping-cart"></i> Order Now</div>
+                </a>
+                <p> Fresh Juice <span style="color:#ff6b35; font-size:14px;">$5.99</span></p>
+            </div>
+
+            <div class="gallery-item">
+                <a href="order.php">
+                    <img src="images/food3.jpg" alt="Soft Drinks">
+                    <div class="order-badge"><i class="fa fa-shopping-cart"></i> Order Now</div>
+                </a>
+                <p> Soft Drinks <span style="color:#ff6b35; font-size:14px;">$3.99</span></p>
+            </div>
+
+            <div class="gallery-item">
+                <a href="order.php">
+                    <img src="images/food4.jpg" alt="Delicious Meal">
+                    <div class="order-badge"><i class="fa fa-shopping-cart"></i> Order Now</div>
+                </a>
+                <p> Delicious Meal <span style="color:#ff6b35; font-size:14px;">$12.99</span></p>
+            </div>
+
+            <div class="gallery-item">
+                <a href="order.php">
+                    <img src="images/food5.jpg" alt="Special Dish">
+                    <div class="order-badge"><i class="fa fa-star"></i> Order Now</div>
+                </a>
+                <p> Special Dish <span style="color:#ff6b35; font-size:14px;">$18.99</span></p>
+            </div>
+            
+            <div class="gallery-item">
+                <a href="order.php">
+                    <img src="images/food6.jpg" alt="Dessert" onerror="this.src='images/food1.jpg'">
+                    <div class="order-badge"><i class="fa fa-shopping-cart"></i> Order Now</div>
+                </a>
+                <p> Delicious Dessert <span style="color:#ff6b35; font-size:14px;">$7.99</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CALL TO ACTION with better design -->
+<div class="content">
+    <div class="cta-section">
+        <h2><i class="fa fa-heart"></i> Ready to Order?</h2>
+        <p>Choose your favorite meal and place your order now. Fast delivery & fresh food!</p>
+        <a href="order.php" class="btn"><i class="fa fa-shopping-cart"></i> Order Now</a>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <p><i class="fa fa-copyright"></i> 2026 Aphro Hotel | All Rights Reserved | <i class="fa fa-phone"></i> +250 792448519</p>
+</div>
+
+</body>
+</html>
