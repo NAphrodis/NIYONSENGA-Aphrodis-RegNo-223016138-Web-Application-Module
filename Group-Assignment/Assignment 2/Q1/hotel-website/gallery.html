@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group 8 Hotel | Culinary Gallery</title>
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-hotel"></i>
+                    Group <span>8</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="menu.html"><i class="fas fa-utensils"></i> Menu</a></li>
+                    <li><a href="order.html"><i class="fas fa-shopping-cart"></i> Order</a></li>
+                    <li><a href="gallery.html" class="active"><i class="fas fa-images"></i> Gallery</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero Banner -->
+    <section class="page-hero" style="background-image: url('assets/images/about-hero.jpg');">
+        <div class="page-hero-overlay"></div>
+        <div class="container page-hero-content">
+            <div class="page-hero-text">
+                <div class="page-hero-badge">
+                  Visual Feast
+                </div>
+                <h1>Our Culinary Gallery</h1>
+                <p>Explore our delicious dishes and refreshing drinks</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Filter -->
+    <section class="gallery-filter-section">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="fish">Fish & Seafood</button>
+                <button class="filter-btn" data-filter="drink">Drinks</button>
+                <button class="filter-btn" data-filter="juice">Juices</button>
+                <button class="filter-btn" data-filter="starter">Appetizers</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="click-hint">
+                <i class="fas fa-mouse-pointer"></i> <strong>Click on any image</strong> to order that item instantly!
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Gallery Item 1 - Grilled Salmon -->
+                <div class="gallery-card" data-category="fish">
+                    <a href="order.html" class="gallery-link">
+                        <div class="gallery-image-wrapper">
+                            <img src="assets/images/grilled-salmon.jpg" alt="Grilled Salmon" onerror="this.src='https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=400&h=300&fit=crop'">
+                            <div class="gallery-overlay">
+                                <span>Order Now</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <h3>Grilled Salmon</h3>
+                            <p>Fresh Atlantic salmon with lemon butter sauce</p>
+                            <div class="item-price">$24.99</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Gallery Item 2 - Lobster Thermidor -->
+                <div class="gallery-card" data-category="fish">
+                    <a href="order.html" class="gallery-link">
+                        <div class="gallery-image-wrapper">
+                            <img src="assets/images/lobster-thermidor.jpg" alt="Lobster Thermidor" onerror="this.src='https://images.unsplash.com/photo-1565552645632-d725f8bfc19e?w=400&h=300&fit=crop'">
+                            <div class="gallery-overlay">
+                                <span>Order Now</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <h3>Lobster Thermidor</h3>
+                            <p>Fresh lobster baked in creamy mushroom sauce</p>
+                            <div class="item-price">$42.00</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Gallery Item 3 - Signature Mojito -->
+                <div class="gallery-card" data-category="drink">
+                    <a href="order.html" class="gallery-link">
+                        <div class="gallery-image-wrapper">
+                            <img src="assets/images/mojito.jpg" alt="Signature Mojito" onerror="this.src='https://images.unsplash.com/photo-1551735941-5c2d6af1a4c9?w=400&h=300&fit=crop'">
+                            <div class="gallery-overlay">
+                                <span>Order Now</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <h3>Signature Mojito</h3>
+                            <p>Fresh mint, lime, rum, and soda water</p>
+                            <div class="item-price">$10.99</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Gallery Item 4 - Fresh Juices -->
+                <div class="gallery-card" data-category="juice">
+                    <a href="order.html" class="gallery-link">
+                        <div class="gallery-image-wrapper">
+                            <img src="assets/images/fresh-juices.jpg" alt="Fresh Juices" onerror="this.src='https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400&h=300&fit=crop'">
+                            <div class="gallery-overlay">
+                                <span>Order Now</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <h3>Fresh Juices</h3>
+                            <p>Tropical & Green blends, cold-pressed daily</p>
+                            <div class="item-price">$6.50+</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Gallery Item 5 - Seared Tuna -->
+                <div class="gallery-card" data-category="fish">
+                    <a href="order.html" class="gallery-link">
+                        <div class="gallery-image-wrapper">
+                            <img src="assets/images/seared-tuna.jpg" alt="Seared Tuna" onerror="this.src='https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?w=400&h=300&fit=crop'">
+                            <div class="gallery-overlay">
+                                <span>Order Now</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <h3>Seared Tuna</h3>
+                            <p>Yellowfin tuna with sesame crust</p>
+                            <div class="item-price">$27.99</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Gallery Item 6 - Bruschetta -->
+                <div class="gallery-card" data-category="starter">
+                    <a href="order.html" class="gallery-link">
+                        <div class="gallery-image-wrapper">
+                            <img src="assets/images/bruschetta.jpg" alt="Bruschetta" onerror="this.src='https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?w=400&h=300&fit=crop'">
+                            <div class="gallery-overlay">
+                                <span>Order Now</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <h3>Bruschetta</h3>
+                            <p>Toasted bread with tomato and basil</p>
+                            <div class="item-price">$8.99</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Gallery Item 7 - Old Fashioned -->
+                <div class="gallery-card" data-category="drink">
+                    <a href="order.html" class="gallery-link">
+                        <div class="gallery-image-wrapper">
+                            <img src="assets/images/old-fashioned.jpg" alt="Old Fashioned" onerror="this.src='https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=400&h=300&fit=crop'">
+                            <div class="gallery-overlay">
+                                <span>Order Now</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <h3>Old Fashioned</h3>
+                            <p>Bourbon, bitters, sugar, orange twist</p>
+                            <div class="item-price">$12.99</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Gallery Item 8 - Garlic Shrimp -->
+                <div class="gallery-card" data-category="starter">
+                    <a href="order.html" class="gallery-link">
+                        <div class="gallery-image-wrapper">
+                            <img src="assets/images/garlic-shrimp.jpg" alt="Garlic Shrimp" onerror="this.src='https://images.unsplash.com/photo-1625943553852-781c6dd46f0a?w=400&h=300&fit=crop'">
+                            <div class="gallery-overlay">
+                                <span>Order Now</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <h3>Garlic Shrimp</h3>
+                            <p>Sautéed shrimp in garlic butter sauce</p>
+                            <div class="item-price">$12.99</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="special-note">
+                <p><i class="fas fa-info-circle"></i> <strong>Note:</strong> Click any image above to be redirected to our Order page!</p>
+                <p><i class="fas fa-camera"></i> All images are for illustration purposes. Ask our staff about today's specials.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-hotel"></i> Group <span>8</span>
+                    </div>
+                    <p>Luxury dining and exceptional hospitality in the heart of the city.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="menu.html"><i class="fas fa-chevron-right"></i> Menu</a></li>
+                        <li><a href="order.html"><i class="fas fa-chevron-right"></i> Order Online</a></li>
+                        <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info-list">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, Huye City</li>
+                        <li><i class="fas fa-phone"></i> +250 792448519</li>
+                        <li><i class="fas fa-envelope"></i> info@Group8hotel.com</li>
+                        <li><i class="fas fa-clock"></i> Daily: 7:00 AM - 11:00 PM</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Opening Hours</h4>
+                    <ul class="hours-list">
+                        <li><i class="fas fa-sun"></i> Breakfast: 7:00 - 10:00</li>
+                        <li><i class="fas fa-cloud-sun"></i> Lunch: 12:00 - 15:00</li>
+                        <li><i class="fas fa-moon"></i> Dinner: 18:00 - 22:00</li>
+                        <li><i class="fas fa-glass-cheers"></i> Bar: 17:00 - 00:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Group 8 Hotel. All rights reserved. | Fine Dining & Luxury Stay</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Gallery Filter JavaScript -->
+    <script>
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filter = btn.getAttribute('data-filter');
+                
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

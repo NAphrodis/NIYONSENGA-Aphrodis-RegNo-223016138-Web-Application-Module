@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Registration Form</title>
+
+<style>
+body {
+    font-family: "Times New Roman", Times, serif;
+    background: #fff;
+    margin: 0;
+    padding: 20px;
+}
+
+.form-container {
+    width: 800px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* FORM */ 
+.form-row {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.form-row label:first-child {
+    width: 140px;
+    font-size: 14px;
+}
+
+/* INPUTS */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    border: 1px solid #000;
+    padding: 4px 6px;
+    font-family: "Times New Roman";
+}
+
+.small-input { width: 200px; }
+.medium-input { width: 260px; }
+
+textarea {
+    height: 50px;
+    width: 260px;
+}
+
+select {
+    border: 1px solid #000;
+    padding: 4px;
+    margin-right: 8px;
+}
+
+.inline {
+    margin-right: 15px;
+}
+
+/* HOBBIES */
+.hobbies-row {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.hobbies-row label:first-child {
+    width: 140px;
+}
+
+.hobbies-line {
+    margin-left: 140px;
+    margin-top: 5px;
+}
+
+/* QUALIFICATION HEADER + TABLE INLINE */
+.qualification-section {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 15px;
+}
+
+.qualification-title {
+    width: 140px;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 8px;
+}
+
+/* TABLE */
+table { 
+    margin-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 5px;
+    text-align: left;
+}
+
+table input {
+    width: 170px;
+    border: 1px solid #000;
+    height: 22px;
+}
+
+/* NOTES OUTSIDE TABLE */
+.table-notes {
+    display: grid;
+    grid-template-columns: 8% 22% 25% 22% 23%;
+    width: calc(100% - 140px);
+    margin-left: 140px;
+    margin-top: 5px;
+}
+
+.table-notes div {
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* BUTTONS */
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 5px 25px;
+    margin: 0 10px;
+    border: 1px solid #000;
+    background: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #f0f0f0;
+}
+
+/* PLANTA'S RESTAURANT SECTION - UPDATED COLORS ONLY */
+.restaurant-section {
+    width: 800px;
+    margin: 40px auto 0 auto;
+    background: #ADD8E6;  /* Light Blue */
+    padding: 30px;
+    text-align: center;
+}
+
+.restaurant-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000000;  /* Black */
+    text-align: center;
+}
+.restaurant-text {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #000000;  /* Black */
+}
+
+.restaurant-nav {
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.restaurant-nav a {
+    color: #800080;  /* Purple */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 5px 10px;
+}
+
+.restaurant-nav a:hover {
+    text-decoration: underline;
+    color: #00008B;  /* Dark Blue on hover */
+}
+
+.highlight {
+    font-weight: bold;
+    color: #00008B;  /* Dark Blue */
+}
+</style>
+
+</head>
+<body>
+
+<div class="form-container">
+<h1>STUDENT REGISTRATION FORM</h1>
+
+<form action="#" method="POST" onsubmit="alert('Form submitted successfully!'); return false;">
+
+<div class="form-row">
+<label>FIRST NAME</label>
+<input type="text" name="first_name" class="small-input" required>
+</div>
+
+<div class="form-row">
+<label>LAST NAME</label>
+<input type="text" name="last_name" class="small-input" required>
+</div>
+
+<div class="form-row">
+<label>DATE OF BIRTH</label>
+<select name="day" required>
+<option value="">Day</option>
+<option value="1">1</option><option value="2">2</option><option value="3">3</option>
+<option value="4">4</option><option value="5">5</option><option value="6">6</option>
+<option value="7">7</option><option value="8">8</option><option value="9">9</option>
+<option value="10">10</option><option value="11">11</option><option value="12">12</option>
+<option value="13">13</option><option value="14">14</option><option value="15">15</option>
+<option value="16">16</option><option value="17">17</option><option value="18">18</option>
+<option value="19">19</option><option value="20">20</option><option value="21">21</option>
+<option value="22">22</option><option value="23">23</option><option value="24">24</option>
+<option value="25">25</option><option value="26">26</option><option value="27">27</option>
+<option value="28">28</option><option value="29">29</option><option value="30">30</option>
+<option value="31">31</option>
+</select>
+<select name="month" required>
+<option value="">Month</option>
+<option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option>
+<option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option>
+<option value="7">Jul</option><option value="8">Aug</option><option value="9">Sep</option>
+<option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
+</select>
+<select name="year" required>
+<option value="">Year</option>
+<option value="1990">1990</option><option value="1991">1991</option><option value="1992">1992</option>
+<option value="1993">1993</option><option value="1994">1994</option><option value="1995">1995</option>
+<option value="1996">1996</option><option value="1997">1997</option><option value="1998">1998</option>
+<option value="1999">1999</option><option value="2000">2000</option><option value="2001">2001</option>
+<option value="2002">2002</option><option value="2003">2003</option><option value="2004">2004</option>
+<option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option>
+<option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option>
+</select>
+</div>
+
+<div class="form-row">
+<label>EMAIL ID</label>
+<input type="email" name="email" class="small-input" required>
+</div>
+
+<div class="form-row">
+<label>MOBILE NUMBER</label>
+<input type="tel" name="mobile" class="medium-input" required>
+</div>
+
+<div class="form-row">
+<label>GENDER</label>
+<label class="inline"><input type="radio" name="gender" value="Male" required> Male</label>
+<label class="inline"><input type="radio" name="gender" value="Female" required> Female</label>
+</div>
+
+<div class="form-row">
+<label>ADDRESS</label>
+<textarea name="address" required></textarea>
+</div>
+
+<div class="form-row">
+<label>CITY</label>
+<input type="text" name="city" class="small-input" required>
+</div>
+
+<div class="form-row">
+<label>PIN CODE</label>
+<input type="text" name="pincode" class="medium-input" required>
+</div>
+
+<div class="form-row">
+<label>STATE</label>
+<input type="text" name="state" class="small-input" required>
+</div>
+
+<div class="form-row">
+<label>COUNTRY</label>
+<select name="country" class="small-input" required>
+<option value="India" selected>India</option>
+<option value="USA">USA</option>
+<option value="UK">UK</option>
+<option value="Canada">Canada</option>
+<option value="Australia">Australia</option>
+</select>
+</div>
+
+<!-- HOBBIES -->
+<div class="hobbies-row">
+<label>HOBBIES</label>
+<label class="inline"><input type="checkbox" name="hobbies[]" value="Drawing"> Drawing</label>
+<label class="inline"><input type="checkbox" name="hobbies[]" value="Singing"> Singing</label>
+<label class="inline"><input type="checkbox" name="hobbies[]" value="Dancing"> Dancing</label>
+<label class="inline"><input type="checkbox" name="hobbies[]" value="Sketching"> Sketching</label>
+</div>
+
+<div class="hobbies-line">
+<label class="inline"><input type="checkbox" name="hobbies[]" value="Others"> Others</label>
+<input type="text" name="other_hobby" class="small-input" placeholder="">
+</div>
+
+<!--  QUALIFICATION INLINE WITH TABLE -->
+<div class="qualification-section">
+    <div class="qualification-title">QUALIFICATION</div>
+
+    <table>
+    <tr>
+    <th>Sl.No</th>
+    <th>Examination</th>
+    <th>Board</th>
+    <th>Percentage</th>
+    <th>Year of Passing</th>
+    </tr>
+
+    <tr>
+    <td>1</td>
+    <td>Class X</td>
+    <td><input type="text"></td>
+    <td><input type="text"></td>
+    <td><input type="text"></td>
+    </tr>
+
+    <tr>
+    <td>2</td>
+    <td>Class XII</td>
+    <td><input type="text"></td>
+    <td><input type="text"></td>
+    <td><input type="text"></td>
+    </tr>
+
+    <tr>
+    <td>3</td>
+    <td>Graduation</td>
+    <td><input type="text"></td>
+    <td><input type="text"></td>
+    <td><input type="text"></td>
+    </tr>
+
+    <tr>
+    <td>4</td>
+    <td>Masters</td>
+    <td><input type="text"></td>
+    <td><input type="text"></td>
+    <td><input type="text"></td>
+    </tr>
+    </table>
+</div>
+
+<!-- NOTES -->
+<div class="table-notes">
+    <div></div>
+    <div></div>
+    <div>(10 char max)</div>
+    <div>(upto 2 decimal)</div>
+    <div></div>
+</div>
+
+<div class="form-row">
+<label>COURSES APPLIED FOR</label>
+<label class="inline"><input type="radio" name="course" value="BCA" required> BCA</label>
+<label class="inline"><input type="radio" name="course" value="B.Com"> B.Com</label>
+<label class="inline"><input type="radio" name="course" value="B.Sc"> B.Sc</label>
+<label class="inline"><input type="radio" name="course" value="B.A"> B.A</label>
+</div>
+
+<div class="buttons">
+<button type="submit">Submit</button>
+<button type="reset">Reset</button>
+</div>
+
+</form>
+</div>
+
+<!-- PLANTA'S RESTAURANT SECTION WITH EXACT COLORS -->
+<div class="restaurant-section">
+    <h2>Welcome to Plantas Restaurant</h2>
+
+    <div class="restaurant-text">
+        Now that you've got instructions, resources, and lots of inspiration, go forth and choose your dream restaurant name.
+    </div>
+
+    <div class="restaurant-nav">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Gallery</a>
+        <a href="#">Order Now</a>
+        <a href="#">Products</a>
+        <a href="#">Contact us</a>
+    </div>
+
+    <div class="restaurant-text">
+        Now that you've got instructions, resources, and lots of inspiration, go forth and choose your dream restaurant name.
+    </div>
+
+    <div class="restaurant-text">
+        Now that you've got instructions, resources, and lots of inspiration, go forth and choose your dreams restaurant name
+    </div>
+</div>
+
+</body>
+</html>
